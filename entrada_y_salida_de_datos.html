@@ -34,21 +34,24 @@
       </div>
       <div class="col-sm-9 col-md-9 col-lg-9 col-xl-9">
         <div style="box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; text-align: justify; font-size: 20px; font-family: Arial, Helvetica, sans-serif;">
-            <h2 class="alert alert-primary" style="text-align: center;">Capítulo 2: introducción a PSeInt</h2><br>
-           Una vez comprendidos los fundamentos del pensamiento computacional y la importancia de la resolución de problemas mediante algoritmos, resulta necesario dar un paso hacia su implementación práctica. <BR></BR>
-           En este contexto, el uso de herramientas educativas como PSeInt facilita la transición entre la lógica abstracta y la programación estructurada. PSeInt es un entorno de desarrollo diseñado específicamente para el aprendizaje de la programación a través del uso de pseudocódigo en español, lo cual permite a los principiantes centrarse en la lógica de los algoritmos sin las complejidades propias de la sintaxis de un lenguaje de programación formal. Esta característica lo convierte en una herramienta idónea para fortalecer las bases conceptuales antes de abordar lenguajes como Python <strong style="font-size: 14px; background-color: #FF0; color: #ffffff;">(Joyanes Aguilar, 2008)</strong> . <BR></BR>
-           El uso de pseudocódigo ha sido ampliamente reconocido como una estrategia efectiva en la enseñanza de la programación, ya que permite representar algoritmos de manera clara, legible y estructurada, facilitando su comprensión y posterior traducción a distintos lenguajes de programación <strong style="font-size: 14px; background-color: #FF0; color: #ffffff;">(Knuth, 1997)</strong>. En este sentido, PSeInt actúa como un puente entre la teoría y la práctica, promoviendo el desarrollo de habilidades lógicas en un entorno accesible. <BR></BR>
-           Asimismo, el aprendizaje mediante herramientas visuales e interactivas contribuye significativamente a la comprensión de los conceptos fundamentales, ya que permite al estudiante experimentar, cometer errores y corregirlos en tiempo real, fortaleciendo así su proceso de aprendizaje <strong style="font-size: 14px; background-color: #FF0; color: #ffffff;">(Wing, 2006)</strong>. <BR></BR>
-           El objetivo de este capítulo es introducir al lector en el uso de PSeInt como herramienta de apoyo para la construcción y ejecución de algoritmos. A través de ejemplos prácticos, se busca consolidar los conocimientos adquiridos en el capítulo anterior y preparar al lector para la posterior transición hacia un lenguaje de programación como Python. <BR></BR>
-           El objetivo de este capítulo es introducir al lector en el uso de PSeInt como herramienta de apoyo para la construcción y ejecución de algoritmos. A través de ejemplos prácticos, se busca consolidar los conocimientos adquiridos en el capítulo anterior y preparar al lector para la posterior transición hacia un lenguaje de programación como Python <strong style="font-size: 14px; background-color: #FF0; color: #ffffff;">(Knuth, D. E. (1997). The Art of Computer Programming. Addison-Wesley; Wing, J. M. (2006). Computational Thinking. Communications of the ACM, 49(3), 33–35; Joyanes Aguilar, L. (2008). Fundamentos de programación: algoritmos, estructuras de datos y objetos. McGraw-Hill)</strong> . <BR></BR>
-            <ul class="list-group">
-               <li class="list-group-item"><a href="instalacion_y_entorno.html">Instalación y entorno</a></li>
-               <li class="list-group-item"><a href="descripcion_del_entorno_pseint.html">Descripción del entorno de PSeInt</a></li>
-               <li class="list-group-item"><a href="primer_algoritmo.html">Primer algoritmo</a></li>
-               <li class="list-group-item"><a href="entrada_y_salida_de_datos.html">Entrada y salida de datos</a></li>
-               <li class="list-group-item">Conclusión del capítulo 2: introducción a PSeInt</li>
-            </ul><BR></BR>
-            <a href="python.html" class="btn btn-primary">Volver a python</a>  | <a href="instalacion_y_entorno.html" class="btn btn-primary">Instalación y entorno</a> <br><br>
+            <h2 class="alert alert-primary" style="text-align: center;">Entrada y salida de datos</h2><br>
+          En todo programa informático, la interacción con el usuario se realiza mediante dos procesos fundamentales: la entrada y la salida de datos. Estos elementos permiten que el algoritmo reciba información del entorno y, posteriormente, genere resultados que puedan ser interpretados por el usuario. <BR></BR>
+          La entrada de datos corresponde al proceso mediante el cual el programa recibe información externa, generalmente proporcionada por el usuario a través del teclado. En PSeInt, esta operación se realiza mediante la instrucción Leer, la cual permite capturar valores y almacenarlos en variables para su posterior procesamiento. <BR></BR>
+          Por otra parte, la salida de datos consiste en la presentación de los resultados obtenidos tras la ejecución del algoritmo. En PSeInt, esta acción se lleva a cabo mediante la instrucción Escribir, que permite mostrar mensajes o valores en pantalla. <BR></BR>
+          El uso adecuado de estas instrucciones es esencial para establecer una comunicación efectiva entre el usuario y el programa, ya que permite verificar el funcionamiento del algoritmo y validar los resultados obtenidos <strong style="font-size: 14px; background-color: #FF0; color: #ffffff;">(Joyanes Aguilar, 2008)</strong>. <BR></BR>
+          A continuación, se presenta un ejemplo básico que ilustra el uso de entrada y salida de datos en PSeInt: <BR></BR>
+          <div style="color: #FF0;">
+            Proceso Saludo <br>
+            Definir nombre Como Cadena <br>
+            Escribir "Ingrese su nombre:" <br>
+            Leer nombre <br>
+            Escribir "Hola ", nombre <br>
+            FinProceso <BR></BR>
+          </div><!--FINAL DIV-->
+          En este ejemplo, el programa solicita al usuario que ingrese su nombre (entrada de datos) y posteriormente muestra un mensaje personalizado en pantalla (salida de datos). Este tipo de interacción representa la base de programas más complejos, donde múltiples entradas son procesadas para generar diferentes resultados. <BR></BR>
+          Desde una perspectiva pedagógica, comprender la entrada y salida de datos permite al estudiante reconocer la importancia de validar la información ingresada, evitando errores y garantizando la correcta ejecución del algoritmo. Este aspecto resulta especialmente relevante en el ámbito de la seguridad informática, donde la validación de datos es un principio fundamental para prevenir vulnerabilidades <strong style="font-size: 14px; background-color: #FF0; color: #ffffff;">(Wing, 2006)</strong>. <BR></BR>
+          En conclusión, la entrada y salida de datos constituyen los mecanismos básicos de comunicación en un programa, siendo esenciales para la construcción de soluciones funcionales, interactivas y seguras <strong style="font-size: 14px; background-color: #FF0; color: #ffffff;">(Wing, J. M. (2006). Computational Thinking. Communications of the ACM, 49(3), 33–35; Joyanes Aguilar, L. (2008). Fundamentos de programación: algoritmos, estructuras de datos y objetos. McGraw-Hill)</strong>. <BR></BR>
+            <a href="python.html" class="btn btn-primary">Volver a python</a>  | <a href="conclusion_capitulo2.html" class="btn btn-primary">Siguiente, conclusión del capítulo 2: introducción a PSeInt</a> <br><br>
         </div>
       </div>
             
