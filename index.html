@@ -1,96 +1,536 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+    <meta charset="UTF-8">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-     <link rel="stylesheet" href="css/bootstrap.css">
-     <link rel="stylesheet" href="css/bootstrap.min.css">
-     <link rel="stylesheet" href="css/estilos.css">
-    <title>LEONEL ALBERTO OSPINA RESTREPO</title>
-  </head>
-  <body>
-<div class="container-fluid" style="background-color: rgb(0, 0, 0); color: aliceblue;">
-    <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12">
-          <!--INICIO DEL MENÙ PRINCIPAL-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leonel Alberto Ospina Restrepo - Analista en Seguridad Informática</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Helvetica Neue', Roboto, sans-serif;
+            line-height: 1.7;
+        }
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled">Disabled</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
+        body {
+            background-color: #ffffff;
+            color: #1a1a1a;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: justify;
+        }
 
-          <!--FINAL DEL MENÙ PRINCIPAL-->
-        </div>
+        /* MENÚ DE NAVEGACIÓN HORIZONTAL */
+        .menu-navegacion {
+            width: 100%;
+            background-color: #1a1a1a;
+            padding: 1rem 0;
+            margin-bottom: 2rem;
+            border-radius: 0 0 6px 6px;
+        }
+
+        .menu-inferior {
+            margin: 3rem 0 0 0;
+            border-radius: 6px 6px 0 0;
+        }
+
+        .menu-navegacion ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .menu-navegacion a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
+        }
+
+        .menu-navegacion a:hover {
+            color: #d97706;
+        }
+
+        /* BANNER SUPERIOR */
+        .banner {
+            width: 100%;
+            height: 280px;
+            overflow: hidden;
+            margin-bottom: 3rem;
+            position: relative;
+            border-radius: 6px;
+        }
+
+        .banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        /* ENCABEZADO PRINCIPAL */
+        .encabezado {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 3rem;
+            align-items: center;
+        }
+
+        /* FOTO DE PERFIL REDONDA Y MÁS PEQUEÑA */
+        .foto-perfil {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            overflow: hidden;
+            background: #f5f5f5;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            margin: 0 auto;
+        }
+
+        .foto-perfil img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        .titulo-principal h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+            color: #000;
+            text-align: left;
+        }
+
+        .subtitulo {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #d97706;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .descripcion-corta {
+            font-size: 1rem;
+            color: #444;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        /* CONTACTO */
+        .contacto {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 2rem 0;
+            padding: 1.5rem 0;
+            border-top: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .contacto-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+            color: #333;
+        }
+
+        .contacto-item a {
+            color: #d97706;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contacto-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* CONTENIDO PRINCIPAL: DOS COLUMNAS */
+        .contenido {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+            margin-bottom: 3rem;
+        }
+
+        .seccion h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #d97706;
+            display: inline-block;
+            text-align: left;
+        }
+
+        /* EXPERIENCIA Y PERFIL */
+        .experiencia-item {
+            margin-bottom: 2rem;
+        }
+
+        .experiencia-item h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+            text-align: left;
+        }
+
+        .lugar-fecha {
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: 0.8rem;
+            font-style: italic;
+            text-align: left;
+        }
+
+        .experiencia-item ul {
+            padding-left: 1.2rem;
+            font-size: 0.95rem;
+            color: #444;
+        }
+
+        /* BARRA LATERAL: HABILIDADES Y EDUCACIÓN */
+        .barra-lateral .seccion {
+            margin-bottom: 2.5rem;
+        }
+
+        .lista-habilidades {
+            list-style: none;
+        }
+
+        .lista-habilidades li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 0.95rem;
+            text-align: left;
+        }
+
+        .estudio-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .estudio-item h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            text-align: left;
+        }
+
+        .estudio-item p {
+            font-size: 0.9rem;
+            color: #666;
+            text-align: left;
+        }
+
+        /* PROYECTOS A ANCHO COMPLETO */
+        .proyectos {
+            width: 100%;
+            margin-bottom: 3rem;
+        }
+
+        .contenedor-proyectos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .proyecto-item {
+            background: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 4px;
+            border-left: 4px solid #d97706;
+        }
+
+        .proyecto-item h3 {
+            margin-bottom: 0.8rem;
+            text-align: left;
+        }
+
+        .proyecto-item a {
+            color: #d97706;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .proyecto-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* REDES SOCIALES CON ICONOS */
+        .redes {
+            margin-top: 1.2rem;
+            display: flex;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+        }
+
+        .redes a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: #1a1a1a;
+            color: white;
+            font-size: 1.3rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .redes a:hover {
+            transform: translateY(-3px);
+        }
+
+        .redes .github:hover { background: #333333; }
+        .redes .linkedin:hover { background: #0077B5; }
+        .redes .facebook:hover { background: #1877F2; }
+        .redes .instagram:hover { background: #E4405F; }
+
+        /* FOOTER */
+        .pie-pagina {
+            width: 100%;
+            margin-top: 0;
+            padding: 0;
+            overflow: hidden;
+            border-radius: 0 0 6px 6px;
+        }
+
+        .pie-pagina img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* RESPONSIVO */
+        @media (max-width: 900px) {
+            .menu-navegacion ul {
+                gap: 1.5rem;
+            }
+            .encabezado {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .titulo-principal h1, .subtitulo, .seccion h2, .experiencia-item h3, .lugar-fecha, .lista-habilidades li, .estudio-item h3, .estudio-item p {
+                text-align: center;
+            }
+            .contenido {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .titulo-principal h1 {
+                font-size: 2rem;
+            }
+            .banner {
+                height: 200px;
+            }
+            .contacto {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- MENÚ DE NAVEGACIÓN SUPERIOR -->
+    <nav class="menu-navegacion">
+        <ul>
+            <li><a href="https://leonelospinarestrepo.github.io/Inicio/" class="activo">INICIO</a></li>
+            <li><a href="cursos.html">CURSOS</a></li>
+            <li><a href="certificaciones.html">CERTIFICACIONES</a></li>
+            <li><a href="https://www.youtube.com/@LeonelOspinaRestrepo" target="_blank">CANAL DE YOUTUBE</a></li>
+            <li><a href="portafolio.html">PORTAFOLIO</a></li>
+            <li><a href="publicaciones.html">PUBLICACIONES</a></li>
+            <li><a href="servicios.html">SERVICIOS</a></li>
+        </ul>
+    </nav>
+
+    <!-- BANNER SUPERIOR -->
+    <div class="banner">
+        <img src="img/banner.jpeg" alt="Banner Leonel Ospina - Analista en Seguridad Informática">
     </div>
-</div>
-<div class="container-fluid" style="background-color: blue;">
-    <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12">
 
+    <!-- ENCABEZADO PRINCIPAL -->
+    <header class="encabezado">
+        <div class="foto-perfil">
+            <img src="img/leonel_ospina.jpeg" alt="Leonel Alberto Ospina Restrepo">
         </div>
-    </div>
-</div>
-<div class="container-fluid" style="background-color: blue;">
-    <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12">
-
+        <div class="titulo-principal">
+            <h1>Leonel Alberto Ospina Restrepo</h1>
+            <p class="subtitulo">Tecnólogo en Negociación Internacional | Analista en Seguridad Informática</p>
+            <p class="descripcion-corta">
+                Leonel Alberto Ospina Restrepo nació el 3 de marzo de 1984 en la ciudad de Medellín - Colombia. Es tecnólogo en Negociación Internacional y Analista en Seguridad Informática. Su trayectoria está enfocada en la administración, protección, y optimización de entornos tecnológicos. Su perfil integra conocimientos estratégicos de gestión con competencias técnicas especializadas en negociación internacional, sistemas operativos, infraestructura en la nube, virtualización y seguridad informática, lo que le permite diseñar e implementar soluciones sólidas y alineadas con las necesidades organizacionales.
+            </p>
         </div>
-    </div>
-</div>
-<div class="container-fluid" style="background-color: blue;">
-    <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12">
+    </header>
 
+    <!-- CONTACTO -->
+    <div class="contacto">
+        <div class="contacto-item">📍 Medellín, Antioquia, Colombia</div>
+        <div class="contacto-item">📧 <a href="mailto:leonelospinar@gmail.com">leonelospinar@gmail.com</a></div>
+        <div class="contacto-item">📱 +57 310 490 5417</div>
+        <div class="contacto-item">🐙 <a href="https://github.com/LeonelOspinaRestrepo" target="_blank">GitHub</a></div>
+        <div class="contacto-item">💼 <a href="https://www.linkedin.com/in/leonel-ospina-41448737b/" target="_blank">LinkedIn</a></div>
+    </div>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="contenido">
+        <!-- COLUMNA IZQUIERDA: PERFIL Y EXPERIENCIA -->
+        <main class="columna-principal">
+            <section class="seccion">
+                <h2>Perfil Profesional</h2>
+                <p style="margin-bottom: 1rem;">
+                    Combina la visión estratégica de la negociación internacional con la solidez técnica de la seguridad informática, ofreciendo un enfoque integral para la protección y el crecimiento de las organizaciones. Se especializa en la gestión segura de infraestructuras tecnológicas y la adaptación de soluciones a los objetivos comerciales.
+                </p>
+                <p style="margin-bottom: 1rem;">
+                    A lo largo de su experiencia profesional, ha trabajado en soporte técnico en sistemas Windows y Linux: realizando procesos de instalación, configuración, mantenimiento preventivo y correctivo, así como diagnóstico y solución de incidentes. Su enfoque está orientado a la optimización del rendimiento, la mitigación de vulnerabilidades y la aplicación de buenas prácticas que garantizan estabilidad y continuidad operativa en los equipos de trabajo. En el ámbito de dispositivos móviles, ha brindado soporte técnico integral en configuración, actualización, resolución de fallos, gestión de aplicaciones y fortalecimiento de la seguridad. Su trabajo incluye la implementación de medidas preventivas, copias de seguridad y asesoría técnica para un uso seguro y eficiente de los recursos tecnológicos. Es miembro de Internet Society desde el 28 de abril del 2015 en el capítulo Colombia, Política de Internet y de Comunidad Latina. Actualmente estudiante de análisis de datos y seguridad informática.
+                </p>
+            </section>
+
+            <section class="seccion" style="margin-top: 2.5rem;">
+                <h2>Experiencia Laboral</h2>
+                <div class="experiencia-item">
+                    <h3>Gerente Ejecutivo</h3>
+                    <p class="lugar-fecha">Empresa Aplicaciones y Datos | 25/02/2017 – 26/02/2022</p>
+                    <ul>
+                        <li>Administración de entornos digitales.</li>
+                        <li>Implementación de soluciones virtuales.</li>
+                        <li>Coordinación de áreas técnicas y estratégicas.</li>
+                    </ul>
+                </div>
+
+                <div class="experiencia-item">
+                    <h3>Programador Web</h3>
+                    <p class="lugar-fecha">Proyecto "El Diario de un Programador" | 19/11/2023 – 21/12/2025</p>
+                    <ul>
+                        <li>Creación de aplicaciones web con PHP y MySQL.</li>
+                        <li>Análisis y desarrollo de aplicaciones.</li>
+                        <li>Desarrollo a la medida.</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <!-- COLUMNA DERECHA: HABILIDADES Y EDUCACIÓN -->
+        <aside class="barra-lateral">
+            <section class="seccion">
+                <h2>Habilidades</h2>
+                <ul class="lista-habilidades">
+                    <li>Negociación internacional</li>
+                    <li>Virtualización de sistemas operativos</li>
+                    <li>Soporte técnico en Windows y Linux</li>
+                    <li>Análisis de riesgos y cumplimiento normativo</li>
+                    <li>Programación web (PHP, MySQL)</li>
+                    <li>Desarrollo de aplicaciones a la medida</li>
+                    <li>Inteligencia artificial</li>
+                    <li>Seguridad informática y protección de activos</li>
+                    <li>Infraestructura en la nube</li>
+                    <li>Git, GitHub y control de versiones</li>
+                    <li>Trabajo colaborativo multidisciplinario</li>
+                </ul>
+            </section>
+
+            <section class="seccion">
+                <h2>Educación</h2>
+                <div class="estudio-item">
+                    <h3>Tecnólogo en Negociación Internacional</h3>
+                    <p>Servicio Nacional de Aprendizaje - SENA</p>
+                    <p>Febrero 2018 – Octubre 2020</p>
+                </div>
+                <div class="estudio-item">
+                    <h3>Certificado en Ciberseguridad</h3>
+                    <p>IBM SkillsBuild</p>
+                    <p>Fecha de emisión: 26/12/2025</p>
+                </div>
+                <div class="estudio-item">
+                    <h3>Especialización en Fundamentos de TI</h3>
+                    <p>Coursera</p>
+                    <p>Fecha de emisión: 12/07/2024</p>
+                </div>
+                <div class="estudio-item">
+                    <h3>Profesional en Ciberseguridad de Google v2</h3>
+                    <p>Fecha de emisión: 23 de febrero de 2025</p>
+                </div>
+            </section>
+        </aside>
+    </div>
+
+    <!-- PROYECTOS DESTACADOS A ANCHO COMPLETO -->
+    <section class="seccion proyectos">
+        <h2>Proyectos Destacados</h2>
+        <div class="contenedor-proyectos">
+            <div class="proyecto-item">
+                <h3>Soporte Técnico</h3>
+                <p>Brindo soluciones integrales en instalación, configuración, mantenimiento y recuperación de sistemas informáticos, garantizando la seguridad y continuidad operativa de los equipos.</p>
+            </div>
+            <div class="proyecto-item">
+                <h3>Repositorio Personal de Proyectos</h3>
+                <p>Explora todos mis trabajos de seguridad, infraestructura y herramientas en mi cuenta oficial: <a href="https://github.com/LeonelOspinaRestrepo" target="_blank">github.com/LeonelOspinaRestrepo</a></p>
+            </div>
+            <div class="proyecto-item">
+                <h3>Conéctate conmigo</h3>
+                <p>Accede a mis perfiles profesionales y sociales para conocer más sobre mi trayectoria y colaboraciones:</p>
+                <div class="redes">
+                    <a href="https://github.com/LeonelOspinaRestrepo" target="_blank" class="github" title="GitHub">
+                        <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/leonel-ospina-41448737b/" target="_blank" class="linkedin" title="LinkedIn">
+                        <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/leonel.ospina.92" target="_blank" class="facebook" title="Facebook">
+                        <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/lospinare/" target="_blank" class="instagram" title="Instagram">
+                        <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
+    </section>
 
-    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- MENÚ DE NAVEGACIÓN INFERIOR -->
+   <nav class="menu-navegacion">
+        <ul>
+            <li><a href="https://leonelospinarestrepo.github.io/Inicio/" class="activo">INICIO</a></li>
+            <li><a href="cursos.html">CURSOS</a></li>
+            <li><a href="certificaciones.html">CERTIFICACIONES</a></li>
+            <li><a href="https://www.youtube.com/@LeonelOspinaRestrepo" target="_blank">CANAL DE YOUTUBE</a></li>
+            <li><a href="portafolio.html">PORTAFOLIO</a></li>
+            <li><a href="publicaciones.html">PUBLICACIONES</a></li>
+            <li><a href="servicios.html">SERVICIOS</a></li>
+        </ul>
+    </nav>
 
-    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
-    -->
-  </body>
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie-pagina">
+        <img src="img/Footer.png" alt="Pie de página Leonel Ospina">
+    </footer>
+</body>
 </html>

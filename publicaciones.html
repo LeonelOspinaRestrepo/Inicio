@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicaciones - Leonel Alberto Ospina Restrepo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Helvetica Neue', Roboto, sans-serif;
+            line-height: 1.7;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #1a1a1a;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: justify;
+        }
+
+        /* MENÚ DE NAVEGACIÓN */
+        .menu-navegacion {
+            width: 100%;
+            background-color: #1a1a1a;
+            padding: 1rem 0;
+            margin-bottom: 2rem;
+            border-radius: 0 0 6px 6px;
+        }
+
+        .menu-inferior {
+            margin: 3rem 0 0 0;
+            border-radius: 6px 6px 0 0;
+        }
+
+        .menu-navegacion ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .menu-navegacion a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
+        }
+
+        .menu-navegacion a:hover, .menu-navegacion a.activo {
+            color: #d97706;
+        }
+
+        /* BANNER */
+        .banner {
+            width: 100%;
+            height: 320px;
+            overflow: hidden;
+            margin-bottom: 3rem;
+            border-radius: 6px;
+        }
+
+        .banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        /* TÍTULO Y INTRODUCCIÓN */
+        .titulo-pagina {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .titulo-pagina h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #000;
+            margin-bottom: 0.8rem;
+        }
+
+        .introduccion {
+            max-width: 900px;
+            margin: 0 auto 3rem;
+            font-size: 1.1rem;
+            color: #444;
+            text-align: center;
+            line-height: 1.8;
+        }
+
+        /* LISTA DE PUBLICACIONES */
+        .contenedor-publicaciones {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .publicacion-item {
+            background: #f9f9f9;
+            padding: 2rem;
+            border-radius: 6px;
+            border-left: 4px solid #d97706;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .publicacion-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 12px rgba(0,0,0,0.08);
+        }
+
+        .publicacion-titulo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+        }
+
+        .publicacion-fecha {
+            font-size: 0.95rem;
+            color: #d97706;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .publicacion-descripcion {
+            font-size: 1rem;
+            color: #444;
+            margin-bottom: 1rem;
+        }
+
+        .publicacion-etiquetas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .etiqueta {
+            background: #e6e6e6;
+            color: #333;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .publicacion-enlace {
+            display: inline-block;
+            color: #d97706;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .publicacion-enlace:hover {
+            color: #b45309;
+            text-decoration: underline;
+        }
+
+        /* PIE DE PÁGINA */
+        .pie-pagina {
+            width: 100%;
+            margin-top: 0;
+            padding: 0;
+            overflow: hidden;
+            border-radius: 0 0 6px 6px;
+        }
+
+        .pie-pagina img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* ADAPTACIÓN A MÓVILES */
+        @media (max-width: 900px) {
+            .menu-navegacion ul {
+                gap: 1.5rem;
+            }
+            .titulo-pagina h1 {
+                font-size: 1.8rem;
+            }
+            .banner {
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- MENÚ SUPERIOR -->
+   <nav class="menu-navegacion">
+        <ul>
+            <li><a href="#">INICIO</a></li>
+            <li><a href="cursos.html">CURSOS</a></li>
+            <li><a href="certificaciones.html">CERTIFICACIONES</a></li>
+            <li><a href="https://www.youtube.com/@LeonelOspinaRestrepo" target="_blank">CANAL DE YOUTUBE</a></li>
+            <li><a href="portafolio.html">PORTAFOLIO</a></li>
+            <li><a href="publicaciones.html" class="activo">PUBLICACIONES</a></li>
+            <li><a href="servicios.html">SERVICIOS</a></li>
+        </ul>
+    </nav>
+
+    <!-- BANNER -->
+    <div class="banner">
+        <img src="img/banner.jpeg" alt="Banner - Publicaciones">
+    </div>
+
+    <!-- TÍTULO E INTRODUCCIÓN -->
+    <div class="titulo-pagina">
+        <h1>PUBLICACIONES</h1>
+    </div>
+
+    <div class="introduccion">
+        Aquí encontrarás los artículos, análisis, informes y contenidos elaborados por el autor <strong>Leonel Alberto Ospina Restrepo</strong>, enfocados en tecnología, ciberseguridad, soporte técnico y comunicación digital.
+    </div>
+
+    <!-- LISTA DE PUBLICACIONES ORDENADAS DE MÁS RECIENTE A MÁS ANTIGUA -->
+    <div class="contenedor-publicaciones">
+
+        <!-- === 2025 === -->
+        <div class="publicacion-item">
+            <h3 class="publicacion-titulo">El diario de un programador: filosofía hacia la tecnología</h3>
+            <p class="publicacion-fecha">19 de mayo de 2025</p>
+            <p class="publicacion-descripcion">
+                Reflexiones sobre el sentido de crear, el impacto de lo que construimos con código y la visión humanista detrás del desarrollo tecnológico.
+            </p>
+            <div class="publicacion-etiquetas">
+                <span class="etiqueta">Filosofía</span>
+                <span class="etiqueta">Programación</span>
+                <span class="etiqueta">Ética tecnológica</span>
+            </div>
+            <a href="#" class="publicacion-enlace">Leer publicación completa →</a>
+        </div>
+
+        <!-- === 2024 === -->
+        <div class="publicacion-item">
+            <h3 class="publicacion-titulo">Hacker en tierra de nadie: raíces tecnológicas (los primeros ordenadores y su impacto en la geopolítica)</h3>
+            <p class="publicacion-fecha">19 de diciembre de 2024</p>
+            <p class="publicacion-descripcion">
+                Recorrido histórico por los orígenes de la computación, cómo surgieron los primeros equipos y su influencia decisiva en las relaciones de poder mundial.
+            </p>
+            <div class="publicacion-etiquetas">
+                <span class="etiqueta">Historia</span>
+                <span class="etiqueta">Geopolítica</span>
+                <span class="etiqueta">Orígenes de la computación</span>
+            </div>
+            <a href="#" class="publicacion-enlace">Leer publicación completa →</a>
+        </div>
+
+        <!-- === 2022 === -->
+        <div class="publicacion-item">
+            <h3 class="publicacion-titulo">Laravel para nuevos programadores</h3>
+            <p class="publicacion-fecha">13 de diciembre de 2022</p>
+            <p class="publicacion-descripcion">
+                Guía introductoria al framework más popular de PHP, con conceptos básicos, instalación y primeros pasos para desarrollar aplicaciones web de forma estructurada.
+            </p>
+            <div class="publicacion-etiquetas">
+                <span class="etiqueta">Laravel</span>
+                <span class="etiqueta">PHP</span>
+                <span class="etiqueta">Desarrollo web</span>
+                <span class="etiqueta">Principiantes</span>
+            </div>
+            <a href="#" class="publicacion-enlace">Leer publicación completa →</a>
+        </div>
+
+        <!-- === 2021 === -->
+        <div class="publicacion-item">
+            <h3 class="publicacion-titulo">Desarrollo de aplicaciones móviles desde cero: conociendo entornos de desarrollo</h3>
+            <p class="publicacion-fecha">3 de febrero de 2021</p>
+            <p class="publicacion-descripcion">
+                Explicación clara de las herramientas, lenguajes y entornos necesarios para crear tus primeras aplicaciones para Android e iOS sin experiencia previa.
+            </p>
+            <div class="publicacion-etiquetas">
+                <span class="etiqueta">Aplicaciones móviles</span>
+                <span class="etiqueta">Android</span>
+                <span class="etiqueta">iOS</span>
+                <span class="etiqueta">Entornos de desarrollo</span>
+            </div>
+            <a href="#" class="publicacion-enlace">Leer publicación completa →</a>
+        </div>
+
+        <!-- === 2020 === -->
+        <div class="publicacion-item">
+            <h3 class="publicacion-titulo">Bitácora 1: sistemas de información para la innovación y la documentación</h3>
+            <p class="publicacion-fecha">27 de noviembre de 2020</p>
+            <p class="publicacion-descripcion">
+                Registro y análisis sobre cómo los sistemas de información fortalecen los procesos creativos, la gestión del conocimiento y la organización documental.
+            </p>
+            <div class="publicacion-etiquetas">
+                <span class="etiqueta">Sistemas de información</span>
+                <span class="etiqueta">Innovación</span>
+                <span class="etiqueta">Documentación</span>
+            </div>
+            <a href="#" class="publicacion-enlace">Leer publicación completa →</a>
+        </div>
+
+        <div class="publicacion-item">
+            <h3 class="publicacion-titulo">Plan estratégico de mercado</h3>
+            <p class="publicacion-fecha">24 de octubre de 2020</p>
+            <p class="publicacion-descripcion">
+                Elementos fundamentales para diseñar una estrategia sólida, definir objetivos, analizar el público y competencia, y establecer acciones para crecer.
+            </p>
+            <div class="publicacion-etiquetas">
+                <span class="etiqueta">Estrategia</span>
+                <span class="etiqueta">Mercado</span>
+                <span class="etiqueta">Planificación</span>
+                <span class="etiqueta">Emprendimiento</span>
+            </div>
+            <a href="#" class="publicacion-enlace">Leer publicación completa →</a>
+        </div>
+
+        <div class="publicacion-item">
+            <h3 class="publicacion-titulo">Informe: definición de rutas</h3>
+            <p class="publicacion-fecha">22 de octubre de 2020</p>
+            <p class="publicacion-descripcion">
+                Documento técnico sobre la identificación, diseño y optimización de rutas operativas, logísticas o de proceso para mejorar la eficiencia.
+            </p>
+            <div class="publicacion-etiquetas">
+                <span class="etiqueta">Logística</span>
+                <span class="etiqueta">Procesos</span>
+                <span class="etiqueta">Optimización</span>
+                <span class="etiqueta">Informes técnicos</span>
+            </div>
+            <a href="#" class="publicacion-enlace">Leer publicación completa →</a>
+        </div>
+
+        <div class="publicacion-item">
+            <h3 class="publicacion-titulo">Planeación de presupuesto</h3>
+            <p class="publicacion-fecha">20 de octubre de 2020</p>
+            <p class="publicacion-descripcion">
+                Guía práctica para estimar costos, asignar recursos y prever gastos en proyectos tecnológicos o empresariales.
+            </p>
+            <div class="publicacion-etiquetas">
+                <span class="etiqueta">Presupuesto</span>
+                <span class="etiqueta">Finanzas</span>
+                <span class="etiqueta">Planificación</span>
+                <span class="etiqueta">Proyectos</span>
+            </div>
+            <a href="#" class="publicacion-enlace">Leer publicación completa →</a>
+        </div>
+
+        <div class="publicacion-item">
+            <h3 class="publicacion-titulo">Conociendo el COVID-19: características de los coronavirus y su historia</h3>
+            <p class="publicacion-fecha">11 de septiembre de 2020</p>
+            <p class="publicacion-descripcion">
+                Revisión científica y narrativa sobre el origen, evolución y propiedades de la familia de virus que dio lugar a la pandemia global.
+            </p>
+            <div class="publicacion-etiquetas">
+                <span class="etiqueta">Salud</span>
+                <span class="etiqueta">Virología</span>
+                <span class="etiqueta">Historia</span>
+                <span class="etiqueta">Investigación</span>
+            </div>
+            <a href="#" class="publicacion-enlace">Leer publicación completa →</a>
+        </div>
+
+        <!-- === 2019 === -->
+        <div class="publicacion-item">
+            <h3 class="publicacion-titulo">Ejercicio práctico: comportamiento del mercado de capitales</h3>
+            <p class="publicacion-fecha">1 de noviembre de 2019</p>
+            <p class="publicacion-descripcion">
+                Análisis práctico sobre el funcionamiento, variables y dinámicas del mercado de capitales.
+            </p>
+            <div class="publicacion-etiquetas">
+                <span class="etiqueta">Finanzas</span>
+                <span class="etiqueta">Mercado de capitales</span>
+                <span class="etiqueta">Ejercicios prácticos</span>
+            </div>
+            <a href="#" class="publicacion-enlace">Leer publicación completa →</a>
+        </div>
+
+        <div class="publicacion-item">
+            <h3 class="publicacion-titulo">Estudio de caso: riesgos en la negociación internacional</h3>
+            <p class="publicacion-fecha">1 de noviembre de 2019</p>
+            <p class="publicacion-descripcion">
+                Identificación y evaluación de los riesgos comerciales, legales y financieros en transacciones transfronterizas.
+            </p>
+            <div class="publicacion-etiquetas">
+                <span class="etiqueta">Negocios internacionales</span>
+                <span class="etiqueta">Riesgos</span>
+                <span class="etiqueta">Comercio exterior</span>
+            </div>
+            <a href="#" class="publicacion-enlace">Leer publicación completa →</a>
+        </div>
+
+        <div class="publicacion-item">
+            <h3 class="publicacion-titulo">Ciclo de vida del producto</h3>
+            <p class="publicacion-fecha">9 de octubre de 2019</p>
+            <p class="publicacion-descripcion">
+                Análisis de las etapas de desarrollo, crecimiento, madurez y declive de un producto en el mercado.
+            </p>
+            <div class="publicacion-etiquetas">
+                <span class="etiqueta">Marketing</span>
+                <span class="etiqueta">Productos</span>
+                <span class="etiqueta">Gestión comercial</span>
+            </div>
+            <a href="#" class="publicacion-enlace">Leer publicación completa →</a>
+        </div>
+
+        <div class="publicacion-item">
+            <h3 class="publicacion-titulo">Manual de inspección en puerto</h3>
+            <p class="publicacion-fecha">9 de octubre de 2019</p>
+            <p class="publicacion-descripcion">
+                Guía normativa y procedimental para la revisión y control de mercancías en instalaciones portuarias.
+            </p>
+            <div class="publicacion-etiquetas">
+                <span class="etiqueta">Logística</span>
+                <span class="etiqueta">Comercio exterior</span>
+                <span class="etiqueta">Normativa</span>
+            </div>
+            <a href="#" class="publicacion-enlace">Leer publicación completa →</a>
+        </div>
+
+        <div class="publicacion-item">
+            <h3 class="publicacion-titulo">Conociendo Windows Server 2012 R2</h3>
+            <p class="publicacion-fecha">24 de mayo de 2019</p>
+            <p class="publicacion-descripcion">
+                Introducción a las características, funciones y administración de la plataforma de servidores de Microsoft.
+            </p>
+            <div class="publicacion-etiquetas">
+                <span class="etiqueta">Windows Server</span>
+                <span class="etiqueta">Servidores</span>
+                <span class="etiqueta">Microsoft</span>
+            </div>
+            <a href="#" class="publicacion-enlace">Leer publicación completa →</a>
+        </div>
+
+        <!-- === 2018 === -->
+        <div class="publicacion-item">
+            <h3 class="publicacion-titulo">Propuesta de planeación para investigación de mercados</h3>
+            <p class="publicacion-fecha">21 de agosto de 2018</p>
+            <p class="publicacion-descripcion">
+                Diseño metodológico para recolectar y analizar información relevante sobre el comportamiento del consumidor.
+            </p>
+            <div class="publicacion-etiquetas">
+                <span class="etiqueta">Investigación</span>
+                <span class="etiqueta">Mercados</span>
+                <span class="etiqueta">Metodología</span>
+            </div>
+            <a href="#" class="publicacion-enlace">Leer publicación completa →</a>
+        </div>
+
+        <div class="publicacion-item">
+            <h3 class="publicacion-titulo">Conociendo Windows Server 2008 R2</h3>
+            <p class="publicacion-fecha">5 de junio de 2018</p>
+            <p class="publicacion-descripcion">
+                Revisión de las herramientas de gestión, seguridad y servicios que ofrece esta versión de sistema operativo para servidores.
+            </p>
+            <div class="publicacion-etiquetas">
+                <span class="etiqueta">Windows Server</span>
+                <span class="etiqueta">Servidores</span>
+                <span class="etiqueta">Microsoft</span>
+            </div>
+            <a href="#" class="publicacion-enlace">Leer publicación completa →</a>
+        </div>
+
+        <div class="publicacion-item">
+            <h3 class="publicacion-titulo">Componentes y medios de transmisión según el Reglamento Técnico de Redes Internas de Comunicaciones</h3>
+            <p class="publicacion-fecha">5 de junio de 2018</p>
+            <p class="publicacion-descripcion">
+                Especificaciones técnicas y normativas para el uso de cables, equipos y canales en redes locales.
+            </p>
+            <div class="publicacion-etiquetas">
+                <span class="etiqueta">Redes</span>
+                <span class="etiqueta">Normativa</span>
+                <span class="etiqueta">Transmisión de datos</span>
+            </div>
+            <a href="#" class="publicacion-enlace">Leer publicación completa →</a>
+        </div>
+
+        <div class="publicacion-item">
+            <h3 class="publicacion-titulo">El Reglamento Técnico para Redes Internas de Comunicaciones y su impacto en la sociedad</h3>
+            <p class="publicacion-fecha">5 de junio de 2018</p>
+            <p class="publicacion-descripcion">
+                Análisis del marco legal colombiano y su influencia en la conectividad y el acceso a servicios digitales.
+            </p>
+            <div class="publicacion-etiquetas">
+                <span class="etiqueta">Normativa</span>
+                <span class="etiqueta">Redes</span>
+                <span class="etiqueta">Sociedad digital</span>
+            </div>
+            <a href="#" class="publicacion-enlace">Leer publicación completa →</a>
+        </div>
+
+        <div class="publicacion-item">
+            <h3 class="publicacion-titulo">Grupos y usuarios en Windows Server 2012</h3>
+            <p class="publicacion-fecha">24 de mayo de 2018</p>
+            <p class="publicacion-descripcion">
+                Procedimientos para crear, configurar y administrar cuentas de usuario y permisos de acceso en entornos de red.
+            </p>
+            <div class="publicacion-etiquetas">
+                <span class="etiqueta">Windows Server</span>
+                <span class="etiqueta">Administración</span>
+                <span class="etiqueta">Seguridad</span>
+            </div>
+            <a href="#" class="publicacion-enlace">Leer publicación completa →</a>
+        </div>
+
+        <div class="publicacion-item">
+            <h3 class="publicacion-titulo">Conociendo Windows 8, Edición 2</h3>
+            <p class="publicacion-fecha">2 de mayo de 2018</p>
+            <p class="publicacion-descripcion">
+                Guía sobre la interfaz, características y uso del sistema operativo de Microsoft para equipos de escritorio y portátiles.
+            </p>
+            <div class="publicacion-etiquetas">
+                <span class="etiqueta">Windows</span>
+                <span class="etiqueta">Sistemas operativos</span>
+                <span class="etiqueta">Microsoft</span>
+            </div>
+            <a href="#" class="publicacion-enlace">Leer publicación completa →</a>
+        </div>
+
+        <div class="publicacion-item">
+            <h3 class="publicacion-titulo">Conociendo Windows 7, Edición 1</h3>
+            <p class="publicacion-fecha">2 de mayo de 2018</p>
+            <p class="publicacion-descripcion">
+                Explicación detallada de los componentes, herramientas y configuraciones básicas y avanzadas de este sistema operativo.
+            </p>
+            <div class="publicacion-etiquetas">
+                <span class="etiqueta">Windows</span>
+                <span class="etiqueta">Sistemas operativos</span>
+                <span class="etiqueta">Microsoft</span>
+            </div>
+            <a href="#" class="publicacion-enlace">Leer publicación completa →</a>
+        </div>
+
+        <!-- === 2017 === -->
+        <div class="publicacion-item">
+            <h3 class="publicacion-titulo">Pros y contras de un acuerdo de libre comercio en Colombia</h3>
+            <p class="publicacion-fecha">7 de abril de 2017</p>
+            <p class="publicacion-descripcion">
+                Balance de los beneficios, desafíos y efectos económicos y sociales de los tratados comerciales en el país.
+            </p>
+            <div class="publicacion-etiquetas">
+                <span class="etiqueta">Comercio internacional</span>
+                <span class="etiqueta">Economía</span>
+                <span class="etiqueta">Colombia</span>
+            </div>
+            <a href="#" class="publicacion-enlace">Leer publicación completa →</a>
+        </div>
+
+        <!-- === 2016 === -->
+        <div class="publicacion-item">
+            <h3 class="publicacion-titulo">Informe de análisis de indicadores, estándares y pertinencia en la gestión para la negociación internacional</h3>
+            <p class="publicacion-fecha">2 de diciembre de 2016</p>
+            <p class="publicacion-descripcion">
+                Revisión de los criterios de medición y normas que definen la calidad y el éxito en los procesos de negociación global.
+            </p>
+            <div class="publicacion-etiquetas">
+                <span class="etiqueta">Negocios internacionales</span>
+                <span class="etiqueta">Gestión</span>
+                <span class="etiqueta">Estándares</span>
+            </div>
+            <a href="#" class="publicacion-enlace">Leer publicación completa →</a>
+        </div>
+
+        <div class="publicacion-item">
+            <h3 class="publicacion-titulo">Informe de la aplicación de software</h3>
+            <p class="publicacion-fecha">2 de diciembre de 2016</p>
+            <p class="publicacion-descripcion">
+                Estudio sobre la implementación, utilidad y resultados de herramientas informáticas en procesos organizacionales.
+            </p>
+            <div class="publicacion-etiquetas">
+                <span class="etiqueta">Software</span>
+                <span class="etiqueta">Tecnología</span>
+                <span class="etiqueta">Implementación</span>
+            </div>
+            <a href="#" class="publicacion-enlace">Leer publicación completa →</a>
+        </div>
+
+    </div>
+
+    <!-- MENÚ INFERIOR -->
+   <nav class="menu-navegacion">
+        <ul>
+            <li><a href="#">INICIO</a></li>
+            <li><a href="cursos.html">CURSOS</a></li>
+            <li><a href="certificaciones.html">CERTIFICACIONES</a></li>
+            <li><a href="https://www.youtube.com/@LeonelOspinaRestrepo" target="_blank">CANAL DE YOUTUBE</a></li>
+            <li><a href="portafolio.html">PORTAFOLIO</a></li>
+            <li><a href="publicaciones.html" class="activo">PUBLICACIONES</a></li>
+            <li><a href="servicios.html">SERVICIOS</a></li>
+        </ul>
+    </nav>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie-pagina">
+        <img src="img/Footer.png" alt="Pie de página">
+    </footer>
+</body>
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+<!DOCTYPE html>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURSOS - Leonel Alberto Ospina Restrepo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Helvetica Neue', Roboto, sans-serif;
+            line-height: 1.7;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #1a1a1a;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: justify;
+        }
+
+        /* MENÚ DE NAVEGACIÓN */
+        .menu-navegacion {
+            width: 100%;
+            background-color: #1a1a1a;
+            padding: 1rem 0;
+            margin-bottom: 2rem;
+            border-radius: 0 0 6px 6px;
+        }
+
+        .menu-inferior {
+            margin: 3rem 0 0 0;
+            border-radius: 6px 6px 0 0;
+        }
+
+        .menu-navegacion ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .menu-navegacion a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
+        }
+
+        .menu-navegacion a:hover, .menu-navegacion a.activo {
+            color: #d97706;
+        }
+
+        /* BANNER */
+        .banner {
+            width: 100%;
+            height: 320px;
+            overflow: hidden;
+            margin-bottom: 3rem;
+            border-radius: 6px;
+        }
+
+        .banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        /* TÍTULO DE LA PÁGINA */
+        .titulo-pagina {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .titulo-pagina h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #000;
+            margin-bottom: 0.5rem;
+        }
+
+        .titulo-pagina p {
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        /* LISTA DE CURSOS */
+        .contenedor-cursos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .curso-item {
+            background: #f9f9f9;
+            padding: 2rem;
+            border-radius: 6px;
+            border-left: 4px solid #d97706;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .curso-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+        }
+
+        .curso-item h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 0.8rem;
+            text-align: left;
+        }
+
+        .curso-entidad {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #d97706;
+            margin-bottom: 0.5rem;
+            text-align: left;
+        }
+
+        .curso-fecha {
+            font-size: 0.95rem;
+            color: #777;
+            font-style: italic;
+            margin-bottom: 1.2rem;
+            text-align: left;
+        }
+
+        .curso-item p {
+            font-size: 1rem;
+            color: #444;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .curso-item ul {
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .curso-item ul li {
+            font-size: 0.95rem;
+            color: #444;
+            margin-bottom: 0.4rem;
+        }
+
+        /* PIE DE PÁGINA */
+        .pie-pagina {
+            width: 100%;
+            margin-top: 0;
+            padding: 0;
+            overflow: hidden;
+            border-radius: 0 0 6px 6px;
+        }
+
+        .pie-pagina img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* ADAPTACIÓN A MÓVILES */
+        @media (max-width: 900px) {
+            .menu-navegacion ul {
+                gap: 1.5rem;
+            }
+            .titulo-pagina h1 {
+                font-size: 1.8rem;
+            }
+            .contenedor-cursos {
+                grid-template-columns: 1fr;
+            }
+            .banner {
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- MENÚ SUPERIOR -->
+ <nav class="menu-navegacion">
+        <ul>
+            <li><a href="https://leonelospinarestrepo.github.io/Inicio/" >INICIO</a></li>
+            <li><a href="cursos.html" class="activo">CURSOS</a></li>
+            <li><a href="certificaciones.html">CERTIFICACIONES</a></li>
+            <li><a href="https://www.youtube.com/@LeonelOspinaRestrepo" target="_blank">CANAL DE YOUTUBE</a></li>
+            <li><a href="portafolio.html">PORTAFOLIO</a></li>
+            <li><a href="publicaciones.html">PUBLICACIONES</a></li>
+            <li><a href="servicios.html">SERVICIOS</a></li>
+        </ul>
+    </nav>
+
+    <!-- BANNER -->
+    <div class="banner">
+        <img src="img/banner.jpeg" alt="Banner - Cursos">
+    </div>
+
+    <!-- TÍTULO -->
+    <div class="titulo-pagina">
+        <h1>CURSOS</h1>
+        <p>Formación continua para clientes y usuarios</p>
+    </div>
+
+    <!-- FILA 1: VIRTUALIZACIÓN E INTELIGENCIA ARTIFICIAL -->
+    <div class="contenedor-cursos">
+        <div class="curso-item">
+            <h3>Curso de Virtualización</h3>
+            <p class="curso-entidad">Capacitación especializada en infraestructura tecnológica</p>
+            <p class="curso-fecha">2022 – Actualidad | Formación práctica y continua</p>
+            <p>Conocimientos para diseñar, implementar y administrar entornos virtualizados, optimizando recursos y garantizando la disponibilidad de servicios.</p>
+            <p><strong>Temas abordados:</strong></p>
+            <ul>
+                <li>Conceptos fundamentales y tipos de hipervisores</li>
+                <li>Instalación y configuración de máquinas virtuales</li>
+                <li>Virtualización de servidores, escritorios y aplicaciones</li>
+                <li>Gestión de memoria, almacenamiento y redes virtuales</li>
+                <li>Copias de seguridad, migración y recuperación</li>
+                <li>Integración con nube pública y privada</li>
+                <li>Seguridad y monitoreo de entornos virtuales</li>
+            </ul>
+        </div>
+
+        <div class="curso-item">
+            <h3>Inteligencia Artificial para Proyectos</h3>
+            <p class="curso-entidad">Aplicación práctica en soluciones tecnológicas</p>
+            <p class="curso-fecha">2024 – Actualidad | Capacitación aplicada</p>
+            <p>Herramientas y metodologías para integrar inteligencia artificial en proyectos reales, automatizar procesos y generar valor agregado.</p>
+            <p><strong>Temas abordados:</strong></p>
+            <ul>
+                <li>Conceptos básicos de IA, machine learning y modelos generativos</li>
+                <li>Análisis y preparación de datos para proyectos de IA</li>
+                <li>Uso de herramientas y plataformas accesibles sin programación avanzada</li>
+                <li>Automatización de tareas y procesos empresariales</li>
+                <li>Implementación de asistentes y soluciones personalizadas</li>
+                <li>Ética, seguridad y buenas prácticas en el uso de IA</li>
+                <li>Evaluación de resultados y mejora continua</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- FILA 2: ADMINISTRACIÓN DE WINDOWS Y REDES SOCIALES -->
+    <div class="contenedor-cursos">
+        <div class="curso-item">
+            <h3>Administración de Sistemas Windows</h3>
+            <p class="curso-entidad">Gestión y mantenimiento de entornos empresariales</p>
+            <p class="curso-fecha">2021 – Actualidad | Formación especializada</p>
+            <p>Habilidades para instalar, configurar, mantener y asegurar sistemas operativos Windows en equipos y servidores.</p>
+            <p><strong>Temas abordados:</strong></p>
+            <ul>
+                <li>Instalación y actualización de versiones de Windows</li>
+                <li>Gestión de usuarios, grupos y permisos de acceso</li>
+                <li>Configuración de políticas de seguridad y actualizaciones</li>
+                <li>Mantenimiento, diagnóstico y solución de fallos</li>
+                <li>Gestión de archivos, carpetas y recursos compartidos</li>
+                <li>Seguridad, respaldo y recuperación del sistema</li>
+                <li>Integración con redes y dominios corporativos</li>
+            </ul>
+        </div>
+
+        <div class="curso-item">
+            <h3>Manejo de Redes Sociales y Medios Digitales</h3>
+            <p class="curso-entidad">Estrategia y gestión de presencia en línea</p>
+            <p class="curso-fecha">2025 – Actualidad | Capacitación práctica</p>
+            <p>Metodologías para gestionar perfiles, crear contenido y fortalecer la comunicación en plataformas digitales.</p>
+            <p><strong>Temas abordados:</strong></p>
+            <ul>
+                <li>Configuración y optimización de perfiles profesionales</li>
+                <li>Planificación y creación de contenido adaptado a cada red</li>
+                <li>Interacción con usuarios y gestión de la reputación digital</li>
+                <li>Uso de herramientas de programación y análisis de métricas</li>
+                <li>Normativas de privacidad y seguridad en redes</li>
+                <li>Estrategias de difusión y alcance de publicaciones</li>
+                <li>Coherencia entre la identidad personal y profesional</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- MENÚ INFERIOR -->
+     <nav class="menu-navegacion">
+        <ul>
+            <li><a href="https://leonelospinarestrepo.github.io/Inicio/">INICIO</a></li>
+            <li><a href="cursos.html" class="activo">CURSOS</a></li>
+            <li><a href="certificaciones.html">CERTIFICACIONES</a></li>
+            <li><a href="https://www.youtube.com/@LeonelOspinaRestrepo" target="_blank">CANAL DE YOUTUBE</a></li>
+            <li><a href="portafolio.html">PORTAFOLIO</a></li>
+            <li><a href="publicaciones.html">PUBLICACIONES</a></li>
+            <li><a href="servicios.html">SERVICIOS</a></li>
+        </ul>
+    </nav>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie-pagina">
+        <img src="img/Footer.png" alt="Pie de página">
+    </footer>
+</body>
+</html>

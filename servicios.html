@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - Leonel Alberto Ospina Restrepo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Helvetica Neue', Roboto, sans-serif;
+            line-height: 1.7;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #1a1a1a;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: justify;
+        }
+
+        /* MENÚ DE NAVEGACIÓN */
+        .menu-navegacion {
+            width: 100%;
+            background-color: #1a1a1a;
+            padding: 1rem 0;
+            margin-bottom: 2rem;
+            border-radius: 0 0 6px 6px;
+        }
+
+        .menu-inferior {
+            margin: 3rem 0 0 0;
+            border-radius: 6px 6px 0 0;
+        }
+
+        .menu-navegacion ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .menu-navegacion a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
+        }
+
+        .menu-navegacion a:hover, .menu-navegacion a.activo {
+            color: #d97706;
+        }
+
+        /* BANNER */
+        .banner {
+            width: 100%;
+            height: 320px;
+            overflow: hidden;
+            margin-bottom: 3rem;
+            border-radius: 6px;
+        }
+
+        .banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        /* TÍTULO E INTRODUCCIÓN */
+        .titulo-pagina {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .titulo-pagina h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #000;
+            margin-bottom: 0.8rem;
+        }
+
+        .introduccion {
+            max-width: 900px;
+            margin: 0 auto 3rem;
+            font-size: 1.1rem;
+            color: #444;
+            text-align: center;
+            line-height: 1.8;
+        }
+
+        /* LISTA DE SERVICIOS */
+        .contenedor-servicios {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .servicio-item {
+            background: #f9f9f9;
+            padding: 2rem;
+            border-radius: 6px;
+            border-left: 4px solid #d97706;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .servicio-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+        }
+
+        .servicio-icono {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #d97706;
+        }
+
+        .servicio-titulo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 0.8rem;
+            text-align: left;
+        }
+
+        .servicio-descripcion {
+            font-size: 1rem;
+            color: #444;
+            margin-bottom: 1rem;
+        }
+
+        .servicio-detalles {
+            padding-left: 1.5rem;
+            margin-bottom: 0;
+        }
+
+        .servicio-detalles li {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 0.3rem;
+        }
+
+        /* PIE DE PÁGINA */
+        .pie-pagina {
+            width: 100%;
+            margin-top: 0;
+            padding: 0;
+            overflow: hidden;
+            border-radius: 0 0 6px 6px;
+        }
+
+        .pie-pagina img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* ADAPTACIÓN A MÓVILES */
+        @media (max-width: 900px) {
+            .menu-navegacion ul {
+                gap: 1.5rem;
+            }
+            .titulo-pagina h1 {
+                font-size: 1.8rem;
+            }
+            .contenedor-servicios {
+                grid-template-columns: 1fr;
+            }
+            .banner {
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- MENÚ SUPERIOR -->
+   <nav class="menu-navegacion">
+        <ul>
+            <li><a href="#">INICIO</a></li>
+            <li><a href="cursos.html">CURSOS</a></li>
+            <li><a href="certificaciones.html">CERTIFICACIONES</a></li>
+            <li><a href="https://www.youtube.com/@LeonelOspinaRestrepo" target="_blank">CANAL DE YOUTUBE</a></li>
+            <li><a href="portafolio.html">PORTAFOLIO</a></li>
+            <li><a href="publicaciones.html">PUBLICACIONES</a></li>
+            <li><a href="servicios.html" class="activo">SERVICIOS</a></li>
+        </ul>
+    </nav>
+
+    <!-- BANNER -->
+    <div class="banner">
+        <img src="img/banner.jpeg" alt="Banner - Servicios">
+    </div>
+
+    <!-- TÍTULO E INTRODUCCIÓN -->
+    <div class="titulo-pagina">
+        <h1>SERVICIOS</h1>
+    </div>
+
+    <div class="introduccion">
+        Soluciones profesionales adaptadas a tus necesidades, ofrecidas por <strong>Leonel Alberto Ospina Restrepo</strong> en áreas de tecnología, soporte técnico, gestión y comunicación.
+    </div>
+
+    <!-- LISTA DE SERVICIOS -->
+    <div class="contenedor-servicios">
+        <!-- SERVICIO 1 -->
+        <div class="servicio-item">
+            <div class="servicio-icono">💻</div>
+            <h3 class="servicio-titulo">Soporte Técnico IT</h3>
+            <p class="servicio-descripcion">
+                Atención presencial y remota para resolver fallos, mantener y optimizar el funcionamiento de tus equipos y sistemas.
+            </p>
+            <ul class="servicio-detalles">
+                <li>Reparación de hardware y software</li>
+                <li>Mantenimiento preventivo y correctivo</li>
+                <li>Configuración de redes y periféricos</li>
+                <li>Recuperación de información</li>
+            </ul>
+        </div>
+
+        <!-- SERVICIO 2 -->
+        <div class="servicio-item">
+            <div class="servicio-icono">🖥️</div>
+            <h3 class="servicio-titulo">Administración de Servidores</h3>
+            <p class="servicio-descripcion">
+                Implementación, configuración y gestión de servidores físicos y virtuales para empresas y emprendimientos.
+            </p>
+            <ul class="servicio-detalles">
+                <li>Instalación de Windows Server y Linux</li>
+                <li>Virtualización y respaldo de servicios</li>
+                <li>Gestión de usuarios y permisos</li>
+                <li>Optimización de seguridad y rendimiento</li>
+            </ul>
+        </div>
+
+        <!-- SERVICIO 3 -->
+        <div class="servicio-item">
+            <div class="servicio-icono">📱</div>
+            <h3 class="servicio-titulo">Reparación de Dispositivos Móviles</h3>
+            <p class="servicio-descripcion">
+                Servicio técnico especializado en teléfonos y tabletas Android e iPhone, con repuestos de calidad.
+            </p>
+            <ul class="servicio-detalles">
+                <li>Cambio de pantallas y baterías</li>
+                <li>Reparación de daños por agua</li>
+                <li>Actualización y recuperación de sistemas</li>
+                <li>Garantía en todos los servicios</li>
+            </ul>
+        </div>
+
+        <!-- SERVICIO 4 -->
+        <div class="servicio-item">
+            <div class="servicio-icono">✍️</div>
+            <h3 class="servicio-titulo">Redacción y Corrección de Textos</h3>
+            <p class="servicio-descripcion">
+                Elaboración, revisión y ajuste de contenidos claros, coherentes y sin errores ortográficos ni gramaticales.
+            </p>
+            <ul class="servicio-detalles">
+                <li>Documentos técnicos e informes</li>
+                <li>Artículos y contenidos web</li>
+                <li>Corrección de estilo y normativas</li>
+                <li>Adaptación a diferentes públicos</li>
+            </ul>
+        </div>
+
+        <!-- SERVICIO 5 -->
+        <div class="servicio-item">
+            <div class="servicio-icono">📊</div>
+            <h3 class="servicio-titulo">Asesoría en Gestión y Mercados</h3>
+            <p class="servicio-descripcion">
+                Orientación para planificar estrategias, analizar mercados y gestionar procesos en negocios y proyectos.
+            </p>
+            <ul class="servicio-detalles">
+                <li>Planes estratégicos de mercado</li>
+                <li>Análisis de viabilidad de proyectos</li>
+                <li>Presupuestos y recursos</li>
+                <li>Conceptos básicos de comercio internacional</li>
+            </ul>
+        </div>
+
+        <!-- SERVICIO 6 -->
+        <div class="servicio-item">
+            <div class="servicio-icono">🌐</div>
+            <h3 class="servicio-titulo">Desarrollo y Soporte Web</h3>
+            <p class="servicio-descripcion">
+                Creación, actualización y mantenimiento de sitios web sencillos y funcionales, adaptados a dispositivos móviles.
+            </p>
+            <ul class="servicio-detalles">
+                <li>Estructura y diseño de páginas</li>
+                <li>Actualización de contenidos</li>
+                <li>Compatibilidad con navegadores</li>
+                <li>Recomendaciones de seguridad</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- MENÚ INFERIOR -->
+   <nav class="menu-navegacion">
+        <ul>
+            <li><a href="#">INICIO</a></li>
+            <li><a href="cursos.html">CURSOS</a></li>
+            <li><a href="certificaciones.html">CERTIFICACIONES</a></li>
+            <li><a href="https://www.youtube.com/@LeonelOspinaRestrepo" target="_blank">CANAL DE YOUTUBE</a></li>
+            <li><a href="portafolio.html">PORTAFOLIO</a></li>
+            <li><a href="publicaciones.html">PUBLICACIONES</a></li>
+            <li><a href="servicios.html" class="activo">SERVICIOS</a></li>
+        </ul>
+    </nav>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie-pagina">
+        <img src="img/Footer.png" alt="Pie de página">
+    </footer>
+</body>
+</html>

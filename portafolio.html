@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Leonel Alberto Ospina Restrepo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Helvetica Neue', Roboto, sans-serif;
+            line-height: 1.7;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #1a1a1a;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: justify;
+        }
+
+        /* MENÚ DE NAVEGACIÓN */
+        .menu-navegacion {
+            width: 100%;
+            background-color: #1a1a1a;
+            padding: 1rem 0;
+            margin-bottom: 2rem;
+            border-radius: 0 0 6px 6px;
+        }
+
+        .menu-inferior {
+            margin: 3rem 0 0 0;
+            border-radius: 6px 6px 0 0;
+        }
+
+        .menu-navegacion ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .menu-navegacion a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
+        }
+
+        .menu-navegacion a:hover, .menu-navegacion a.activo {
+            color: #d97706;
+        }
+
+        /* BANNER */
+        .banner {
+            width: 100%;
+            height: 320px;
+            overflow: hidden;
+            margin-bottom: 3rem;
+            border-radius: 6px;
+        }
+
+        .banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        /* TÍTULO DE LA PÁGINA */
+        .titulo-pagina {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .titulo-pagina h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #000;
+            margin-bottom: 0.5rem;
+        }
+
+        .titulo-pagina p {
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        /* LISTA DE PROYECTOS */
+        .contenedor-portafolio {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .proyecto-item {
+            background: #f9f9f9;
+            padding: 2rem;
+            border-radius: 6px;
+            border-left: 4px solid #d97706;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .proyecto-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+        }
+
+        .proyecto-imagen {
+            width: 100%;
+            height: 200px;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 1.2rem;
+            background: #e9e9e9;
+        }
+
+        .proyecto-imagen img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .proyecto-titulo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+            text-align: left;
+        }
+
+        .proyecto-etiquetas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .etiqueta {
+            background: #e6e6e6;
+            color: #333;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .proyecto-descripcion {
+            font-size: 1rem;
+            color: #444;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .proyecto-items {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .proyecto-items li {
+            font-size: 0.95rem;
+            color: #444;
+            margin-bottom: 0.4rem;
+        }
+
+        .proyecto-enlace {
+            display: none;
+        }
+
+        /* PIE DE PÁGINA */
+        .pie-pagina {
+            width: 100%;
+            margin-top: 0;
+            padding: 0;
+            overflow: hidden;
+            border-radius: 0 0 6px 6px;
+        }
+
+        .pie-pagina img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* ADAPTACIÓN A MÓVILES */
+        @media (max-width: 900px) {
+            .menu-navegacion ul {
+                gap: 1.5rem;
+            }
+            .titulo-pagina h1 {
+                font-size: 1.8rem;
+            }
+            .contenedor-portafolio {
+                grid-template-columns: 1fr;
+            }
+            .banner {
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- MENÚ SUPERIOR -->
+    <nav class="menu-navegacion">
+        <ul>
+            <li><a href="#">INICIO</a></li>
+            <li><a href="cursos.html">CURSOS</a></li>
+            <li><a href="certificaciones.html">CERTIFICACIONES</a></li>
+            <li><a href="https://www.youtube.com/@LeonelOspinaRestrepo" target="_blank">CANAL DE YOUTUBE</a></li>
+            <li><a href="portafolio.html" class="activo">PORTAFOLIO</a></li>
+            <li><a href="#">PUBLICACIONES</a></li>
+            <li><a href="#">SERVICIOS</a></li>
+        </ul>
+    </nav>
+
+    <!-- BANNER -->
+    <div class="banner">
+        <img src="img/banner.jpeg" alt="Banner - Portafolio">
+    </div>
+
+    <!-- TÍTULO -->
+    <div class="titulo-pagina">
+        <h1>PORTAFOLIO</h1>
+        <p>Proyectos, desarrollos y trabajos realizados</p>
+    </div>
+
+    <!-- LISTA DE PROYECTOS -->
+    <div class="contenedor-portafolio">
+        <!-- PROYECTO 1: CAMBIO DE DISPLAY -->
+        <div class="proyecto-item">
+            <div class="proyecto-imagen">
+                <img src="img/cambiodisplay.jpg" alt="Cambio de display en dispositivos móviles">
+            </div>
+            <h3 class="proyecto-titulo">Cambio de display (Android / iPhone)</h3>
+            <div class="proyecto-etiquetas">
+                <span class="etiqueta">Mantenimiento</span>
+                <span class="etiqueta">Hardware móvil</span>
+                <span class="etiqueta">Android</span>
+                <span class="etiqueta">iPhone</span>
+            </div>
+            <p class="proyecto-descripcion">
+                Servicio técnico especializado en reemplazo de pantallas para dispositivos móviles, garantizando el funcionamiento correcto y la compatibilidad de cada componente.
+            </p>
+            <p><strong>Items del servicio:</strong></p>
+            <ul class="proyecto-items">
+                <li>Evaluación previa del estado del equipo</li>
+                <li>Desmontaje seguro y sin daños en la carcasa</li>
+                <li>Reemplazo por pantallas originales o de alta calidad</li>
+                <li>Pruebas de respuesta táctil, colores y brillo</li>
+                <li>Verificación de sensores y cámaras adyacentes</li>
+                <li>Limpieza interna y sellado hermético posterior al cambio</li>
+                <li>Garantía sobre el repuesto y la mano de obra</li>
+            </ul>
+        </div>
+
+        <!-- PROYECTO 2: IMPLEMENTACIÓN DE SERVIDORES -->
+        <div class="proyecto-item">
+            <div class="proyecto-imagen">
+                <img src="img/servidores.jpg" alt="Implementación de Servidores Virtuales">
+            </div>
+            <h3 class="proyecto-titulo">Implementación de Servidores Virtuales</h3>
+            <div class="proyecto-etiquetas">
+                <span class="etiqueta">Virtualización</span>
+                <span class="etiqueta">Linux</span>
+                <span class="etiqueta">Windows Server</span>
+            </div>
+            <p class="proyecto-descripcion">
+                Diseño y puesta en marcha de infraestructura virtualizada para reducir costos de hardware y mejorar la disponibilidad de servicios tecnológicos.
+            </p>
+            <p><strong>Items del proyecto:</strong></p>
+            <ul class="proyecto-items">
+                <li>Análisis de necesidades y dimensionamiento de recursos</li>
+                <li>Instalación y configuración de hipervisores</li>
+                <li>Creación y ajuste de máquinas virtuales</li>
+                <li>Configuración de redes y almacenamiento compartido</li>
+                <li>Políticas de respaldo y recuperación ante fallos</li>
+                <li>Optimización de rendimiento y seguridad</li>
+                <li>Capacitación básica para administración y monitoreo</li>
+            </ul>
+        </div>
+
+        <!-- PROYECTO 3: SOPORTE TÉCNICO IT -->
+        <div class="proyecto-item">
+            <div class="proyecto-imagen">
+                <img src="img/soportemovil.jpg" alt="Soporte Técnico IT">
+            </div>
+            <h3 class="proyecto-titulo">Soporte Técnico IT</h3>
+            <div class="proyecto-etiquetas">
+                <span class="etiqueta">Soporte</span>
+                <span class="etiqueta">Asistencia remota</span>
+                <span class="etiqueta">Mantenimiento</span>
+                <span class="etiqueta">Resolución de fallos</span>
+            </div>
+            <p class="proyecto-descripcion">
+                Atención integral para la resolución de fallos, mantenimiento preventivo y correctivo, con asistencia presencial y remota para equipos y sistemas informáticos.
+            </p>
+            <p><strong>Items del servicio:</strong></p>
+            <ul class="proyecto-items">
+                <li>Diagnóstico y reparación de fallos de hardware y software</li>
+                <li>Mantenimiento preventivo de equipos y sistemas</li>
+                <li>Formateo, instalación y actualización de sistemas operativos</li>
+                <li>Configuración de redes, impresoras y periféricos</li>
+                <li>Recuperación de información y respaldo de datos</li>
+                <li>Eliminación de virus, malware y optimización del rendimiento</li>
+                <li>Asesoramiento y capacitación básica a usuarios</li>
+            </ul>
+        </div>
+
+        <!-- PROYECTO 4: REDACCIÓN DE TEXTOS -->
+        <div class="proyecto-item">
+            <div class="proyecto-imagen">
+                <img src="img/redaccion.jpg" alt="Redacción de textos">
+            </div>
+            <h3 class="proyecto-titulo">Redacción de textos</h3>
+            <div class="proyecto-etiquetas">
+                <span class="etiqueta">Redacción</span>
+                <span class="etiqueta">Corrección</span>
+                <span class="etiqueta">Estilo</span>
+                <span class="etiqueta">Comunicación</span>
+            </div>
+            <p class="proyecto-descripcion">
+                Elaboración, revisión y ajuste de contenidos adaptados a cada propósito, con claridad, coherencia y cumplimiento de normas ortográficas y gramaticales.
+            </p>
+            <p><strong>Items del servicio:</strong></p>
+            <ul class="proyecto-items">
+                <li>Elaboración de artículos, informes y documentos técnicos</li>
+                <li>Corrección ortográfica, gramatical y de estilo</li>
+                <li>Adaptación de contenidos a diferentes públicos y formatos</li>
+                <li>Redacción de textos para sitios web y redes sociales</li>
+                <li>Organización y estructuración de ideas complejas</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- MENÚ INFERIOR -->
+    <nav class="menu-navegacion">
+        <ul>
+            <li><a href="#">INICIO</a></li>
+            <li><a href="cursos.html">CURSOS</a></li>
+            <li><a href="certificaciones.html">CERTIFICACIONES</a></li>
+            <li><a href="https://www.youtube.com/@LeonelOspinaRestrepo" target="_blank">CANAL DE YOUTUBE</a></li>
+            <li><a href="portafolio.html" class="activo">PORTAFOLIO</a></li>
+            <li><a href="#">PUBLICACIONES</a></li>
+            <li><a href="#">SERVICIOS</a></li>
+        </ul>
+    </nav>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie-pagina">
+        <img src="img/Footer.png" alt="Pie de página">
+    </footer>
+</body>
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+<!DOCTYPE html>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificaciones - Leonel Alberto Ospina Restrepo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Helvetica Neue', Roboto, sans-serif;
+            line-height: 1.7;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #1a1a1a;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: justify;
+        }
+
+        /* MENÚ DE NAVEGACIÓN */
+        .menu-navegacion {
+            width: 100%;
+            background-color: #1a1a1a;
+            padding: 1rem 0;
+            margin-bottom: 2rem;
+            border-radius: 0 0 6px 6px;
+        }
+
+        .menu-inferior {
+            margin: 3rem 0 0 0;
+            border-radius: 6px 6px 0 0;
+        }
+
+        .menu-navegacion ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .menu-navegacion a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
+        }
+
+        .menu-navegacion a:hover, .menu-navegacion a.activo {
+            color: #d97706;
+        }
+
+        /* BANNER */
+        .banner {
+            width: 100%;
+            height: 320px;
+            overflow: hidden;
+            margin-bottom: 3rem;
+            border-radius: 6px;
+        }
+
+        .banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        /* TÍTULO DE LA PÁGINA */
+        .titulo-pagina {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .titulo-pagina h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #000;
+            margin-bottom: 0.5rem;
+        }
+
+        .titulo-pagina p {
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        /* LISTA DE CERTIFICACIONES */
+        .contenedor-certificaciones {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .cert-item {
+            background: #f9f9f9;
+            padding: 2rem;
+            border-radius: 6px;
+            border-left: 4px solid #d97706;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cert-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+        }
+
+        .cert-imagen {
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 1.5rem;
+            overflow: hidden;
+            border-radius: 50%;
+            background: #ffffff;
+            padding: 0.5rem;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+        }
+
+        .cert-imagen img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .cert-titulo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .cert-entidad {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #d97706;
+            text-align: center;
+        }
+
+        /* PIE DE PÁGINA */
+        .pie-pagina {
+            width: 100%;
+            margin-top: 0;
+            padding: 0;
+            overflow: hidden;
+            border-radius: 0 0 6px 6px;
+        }
+
+        .pie-pagina img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* ADAPTACIÓN A MÓVILES */
+        @media (max-width: 900px) {
+            .menu-navegacion ul {
+                gap: 1.5rem;
+            }
+            .titulo-pagina h1 {
+                font-size: 1.8rem;
+            }
+            .contenedor-certificaciones {
+                grid-template-columns: 1fr;
+            }
+            .banner {
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- MENÚ SUPERIOR -->
+      <nav class="menu-navegacion">
+        <ul>
+            <li><a href="#">INICIO</a></li>
+            <li><a href="cursos.html">CURSOS</a></li>
+            <li><a href="certificaciones.html" class="activo">CERTIFICACIONES</a></li>
+            <li><a href="https://www.youtube.com/@LeonelOspinaRestrepo" target="_blank">CANAL DE YOUTUBE</a></li>
+            <li><a href="#">PORTAFOLIO</a></li>
+            <li><a href="#">PUBLICACIONES</a></li>
+            <li><a href="#">SERVICIOS</a></li>
+        </ul>
+    </nav>
+
+    <!-- BANNER -->
+    <div class="banner">
+        <img src="img/banner.jpeg" alt="Banner - Certificaciones">
+    </div>
+
+    <!-- TÍTULO -->
+    <div class="titulo-pagina">
+        <h1>CERTIFICACIONES</h1>
+        <p>Insignias y reconocimientos oficiales de formación profesional</p>
+    </div>
+
+    <!-- LISTA COMPLETA DE CERTIFICACIONES -->
+    <div class="contenedor-certificaciones">
+        <!-- 1. Explorador Ágil -->
+        <div class="cert-item">
+            <div class="cert-imagen">
+                <img src="img/explorador_agil.png" alt="Insignia Explorador ágil">
+            </div>
+            <h3 class="cert-titulo">Explorador ágil</h3>
+            <p class="cert-entidad">IBM SkillsBuild</p>
+        </div>
+
+        <!-- 2. Fundamentos IA V2 -->
+        <div class="cert-item">
+            <div class="cert-imagen">
+                <img src="img/fundamentos.png" alt="Insignia Fundamentos de la Inteligencia Artificial V2">
+            </div>
+            <h3 class="cert-titulo">Fundamentos de la Inteligencia Artificial V2</h3>
+            <p class="cert-entidad">Coursera</p>
+        </div>
+
+        <!-- 3. Fundamentos IA -->
+        <div class="cert-item">
+            <div class="cert-imagen">
+                <img src="img/fundamentosIA.png" alt="Insignia Fundamentos de la Inteligencia Artificial">
+            </div>
+            <h3 class="cert-titulo">Fundamentos de la Inteligencia Artificial</h3>
+            <p class="cert-entidad">IBM SkillsBuild</p>
+        </div>
+
+        <!-- 4. Camino a la Excelencia Soporte -->
+        <div class="cert-item">
+            <div class="cert-imagen">
+                <img src="img/camino.png" alt="Insignia Camino hacia la Excelencia en Soporte Tecnológico de Google">
+            </div>
+            <h3 class="cert-titulo">Camino hacia la Excelencia en Soporte Tecnológico de Google</h3>
+            <p class="cert-entidad">Coursera</p>
+        </div>
+
+        <!-- 5. Creación de Chatbots -->
+        <div class="cert-item">
+            <div class="cert-imagen">
+                <img src="img/creacionchatsbots.png" alt="Insignia Fundamentos para la creación de chatbots">
+            </div>
+            <h3 class="cert-titulo">Fundamentos para la creación de chatbots</h3>
+            <p class="cert-entidad">Coursera</p>
+        </div>
+
+        <!-- 6. Seguridad en la nube -->
+        <div class="cert-item">
+            <div class="cert-imagen">
+                <img src="img/cloudsecurity.png" alt="Insignia Seguridad en la nube">
+            </div>
+            <h3 class="cert-titulo">Seguridad en la nube</h3>
+            <p class="cert-entidad">IBM SkillsBuild</p>
+        </div>
+
+        <!-- 7. Conceptos básicos de hardware -->
+        <div class="cert-item">
+            <div class="cert-imagen">
+                <img src="img/computerhardware.png" alt="Insignia Conceptos básicos de hardware informático">
+            </div>
+            <h3 class="cert-titulo">Conceptos básicos de hardware informático</h3>
+            <p class="cert-entidad">Cisco</p>
+        </div>
+
+        <!-- 8. Marco de cumplimiento -->
+        <div class="cert-item">
+            <div class="cert-imagen">
+                <img src="img/marcocumplimiento.png" alt="Insignia Marco de cumplimiento de ciberseguridad y administración del sistema">
+            </div>
+            <h3 class="cert-titulo">Marco de cumplimiento de ciberseguridad y administración del sistema</h3>
+            <p class="cert-entidad">Coursera</p>
+        </div>
+
+        <!-- 9. Fundamentos de ciberseguridad -->
+        <div class="cert-item">
+            <div class="cert-imagen">
+                <img src="img/fundamentoseguridad.png" alt="Insignia Fundamentos de la ciberseguridad">
+            </div>
+            <h3 class="cert-titulo">Fundamentos de la ciberseguridad</h3>
+            <p class="cert-entidad">Coursera</p>
+        </div>
+
+        <!-- 10. Especialización Fundamentos TI en Ciberseguridad -->
+        <div class="cert-item">
+            <div class="cert-imagen">
+                <img src="img/IT_Fund_for_Cyber_Specialist.png" alt="Insignia Especialización en Fundamentos de TI en Ciberseguridad">
+            </div>
+            <h3 class="cert-titulo">Especialización en Fundamentos de TI en Ciberseguridad</h3>
+            <p class="cert-entidad">Coursera</p>
+        </div>
+
+        <!-- 11. Funciones, procesos y seguridad de SO -->
+        <div class="cert-item">
+            <div class="cert-imagen">
+                <img src="img/funcionesprocesos.png" alt="Insignia Funciones, procesos y seguridad de los sistemas operativos en ciberseguridad">
+            </div>
+            <h3 class="cert-titulo">Funciones, procesos y seguridad de los sistemas operativos en ciberseguridad</h3>
+            <p class="cert-entidad">Coursera</p>
+        </div>
+
+        <!-- 12. Análisis de datos con Python -->
+        <div class="cert-item">
+            <div class="cert-imagen">
+                <img src="img/analisisdatos.png" alt="Insignia Análisis de datos con Python">
+            </div>
+            <h3 class="cert-titulo">Análisis de datos con Python</h3>
+            <p class="cert-entidad">Coursera</p>
+        </div>
+    </div>
+
+    <!-- MENÚ INFERIOR -->
+      <nav class="menu-navegacion">
+        <ul>
+            <li><a href="#">INICIO</a></li>
+            <li><a href="cursos.html">CURSOS</a></li>
+            <li><a href="certificaciones.html" class="activo">CERTIFICACIONES</a></li>
+            <li><a href="https://www.youtube.com/@LeonelOspinaRestrepo" target="_blank">CANAL DE YOUTUBE</a></li>
+            <li><a href="#">PORTAFOLIO</a></li>
+            <li><a href="#">PUBLICACIONES</a></li>
+            <li><a href="#">SERVICIOS</a></li>
+        </ul>
+    </nav>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie-pagina">
+        <img src="img/Footer.png" alt="Pie de página">
+    </footer>
+</body>
+</html>
